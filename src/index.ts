@@ -1,4 +1,4 @@
-import EmitterListener from './emitterListener';
+import EmitterListener, { EmitMessage, EmittedMessage, HandlerFunction } from './emitterListener';
 import { Qlobber } from 'qlobber';
 
 function defaultResolve(): boolean {
@@ -16,15 +16,8 @@ export interface ConstructorOptions {
   concurrency?: number;
 }
 
-export interface EmitMessage {
-  topic: string;
-  [key: string]: any;
-}
-
-export type HandlerFunction<TContext> = (message: EmitMessage, context?: TContext) => Promise<void>;
-
-export interface IteratorEmitMessage<TContext> {
-  message: EmitMessage;
+export interface IteratorEmittedMessage<TContext> {
+  message: EmittedMessage;
   context?: TContext;
 }
 
@@ -81,7 +74,7 @@ class Emitter {
           return false;
         }
         return listener.fn
-          .call(null, options, listener.context)
+          .call(null, { ...options, subscriptionTopic: listener.topic }, listener.context)
           .then(defaultResolve)
           .catch(defaultReject)
           .finally(() => {

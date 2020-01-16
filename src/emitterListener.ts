@@ -2,19 +2,28 @@ import hyperid from 'hyperid';
 
 const getId = hyperid();
 
-export interface DecodedId {
-  uuid: string;
-  count: number;
+export interface EmitMessage {
+  topic: string;
+  [key: string]: any;
 }
+
+export interface EmittedMessage extends EmitMessage {
+  subscriptionTopic: string;
+}
+
+export type HandlerFunction<TContext> = (
+  message: EmittedMessage,
+  context?: TContext
+) => Promise<void>;
 
 class EmitterListener<TContext = any> {
   private _id: string;
-  private _fn: Function;
+  private _fn: HandlerFunction<TContext>;
   private _context: TContext | undefined;
   private _once: boolean;
   private _topic: string;
 
-  constructor(topic: string, fn: Function, context: TContext, once = false) {
+  constructor(topic: string, fn: HandlerFunction<TContext>, context: TContext, once = false) {
     this._id = getId();
     this._fn = fn;
     this._topic = topic;
@@ -30,7 +39,7 @@ class EmitterListener<TContext = any> {
     return this._id;
   }
 
-  get fn(): Function {
+  get fn(): HandlerFunction<TContext> {
     return this._fn;
   }
 
