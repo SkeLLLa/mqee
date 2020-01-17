@@ -12,6 +12,7 @@ export interface EmittedMessage extends EmitMessage {
 }
 
 export type HandlerFunction<TContext> = (
+  this: EmitterListener<TContext>,
   message: EmittedMessage,
   context?: TContext
 ) => Promise<void>;

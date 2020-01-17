@@ -74,7 +74,7 @@ class Emitter {
           return false;
         }
         return listener.fn
-          .call(null, { ...options, subscriptionTopic: listener.topic }, listener.context)
+          .call(listener, options, listener.context)
           .then(defaultResolve)
           .catch(defaultReject)
           .finally(() => {
