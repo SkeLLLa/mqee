@@ -34,7 +34,7 @@
 
 \+ **new EmitterListener**(`topic`: string, `fn`: [HandlerFunction](../README.md#handlerfunction)‹TContext›, `context`: TContext, `once`: boolean): *[EmitterListener](emitterlistener.md)*
 
-Defined in emitterListener.ts:24
+Defined in emitterListener.ts:25
 
 **Parameters:**
 
@@ -53,7 +53,7 @@ Name | Type | Default |
 
 • **get context**(): *any*
 
-Defined in emitterListener.ts:46
+Defined in emitterListener.ts:47
 
 **Returns:** *any*
 
@@ -63,7 +63,7 @@ ___
 
 • **get fn**(): *[HandlerFunction](../README.md#handlerfunction)‹TContext›*
 
-Defined in emitterListener.ts:42
+Defined in emitterListener.ts:43
 
 **Returns:** *[HandlerFunction](../README.md#handlerfunction)‹TContext›*
 
@@ -73,7 +73,7 @@ ___
 
 • **get id**(): *string*
 
-Defined in emitterListener.ts:38
+Defined in emitterListener.ts:39
 
 **Returns:** *string*
 
@@ -83,7 +83,7 @@ ___
 
 • **get once**(): *boolean*
 
-Defined in emitterListener.ts:50
+Defined in emitterListener.ts:51
 
 **Returns:** *boolean*
 
@@ -93,7 +93,7 @@ ___
 
 • **get topic**(): *string*
 
-Defined in emitterListener.ts:54
+Defined in emitterListener.ts:55
 
 **Returns:** *string*
 
@@ -103,7 +103,7 @@ Defined in emitterListener.ts:54
 
 ▸ **isValid**(`id`: string): *boolean*
 
-Defined in emitterListener.ts:34
+Defined in emitterListener.ts:35
 
 **Parameters:**
 

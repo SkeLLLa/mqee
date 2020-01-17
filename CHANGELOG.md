@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://gitlab.com/m03geek/mqee/compare/v0.1.1...v0.1.2) (2020-01-17)
+
+
+### Features
+
+* remove subscription topic from event ([a599eac](https://gitlab.com/m03geek/mqee/commit/a599eac9b841afc6865fa19e62bce9774e3ed5cd))
+
 ### 0.1.1 (2020-01-16)
 
 

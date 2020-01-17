@@ -41,12 +41,13 @@ Defined in emitterListener.ts:14
 
 #### Type declaration:
 
-▸ (`message`: [EmittedMessage](interfaces/emittedmessage.md), `context?`: TContext): *Promise‹void›*
+▸ (`this`: [EmitterListener](classes/emitterlistener.md)‹TContext›, `message`: [EmittedMessage](interfaces/emittedmessage.md), `context?`: TContext): *Promise‹void›*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
+`this` | [EmitterListener](classes/emitterlistener.md)‹TContext› |
 `message` | [EmittedMessage](interfaces/emittedmessage.md) |
 `context?` | TContext |
 
