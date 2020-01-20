@@ -14,6 +14,7 @@ export interface ConstructorOptions {
   wildcardSome?: string;
   separator?: string;
   concurrency?: number;
+  cacheAdds?: boolean;
 }
 
 export interface IteratorEmittedMessage<TContext> {
@@ -40,11 +41,13 @@ class Emitter {
     wildcardSome = '#',
     separator = '/',
     concurrency = Infinity, // not used for now
+    cacheAdds = true,
   }: ConstructorOptions = {}) {
     this._matcher = new Qlobber({
       wildcard_one: wildcardOne,
       wildcard_some: wildcardSome,
       separator,
+      cache_adds: cacheAdds,
     });
     this._concurrency = concurrency || this._concurrency;
 

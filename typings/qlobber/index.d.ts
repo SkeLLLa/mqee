@@ -6,6 +6,7 @@ declare module 'qlobber' {
       wildcard_some?: string;
       max_words?: number;
       max_wildcard_somes?: number;
+      cache_adds?: boolean;
     }
   }
 
