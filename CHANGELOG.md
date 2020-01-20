@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://gitlab.com/m03geek/mqee/compare/v0.1.3...v0.1.4) (2020-01-20)
+
+
+### Features
+
+* new id generator ([03ae911](https://gitlab.com/m03geek/mqee/commit/03ae91160fde3d010ba6bca05f9e39100cc1574a))
+
 ### [0.1.3](https://gitlab.com/m03geek/mqee/compare/v0.1.2...v0.1.3) (2020-01-20)
 
 

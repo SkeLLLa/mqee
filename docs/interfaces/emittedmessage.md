@@ -25,7 +25,7 @@
 
 • **subscriptionTopic**: *string*
 
-Defined in emitterListener.ts:11
+Defined in emitterListener.ts:9
 
 ___
 
@@ -35,4 +35,4 @@ ___
 
 *Inherited from [EmitMessage](emitmessage.md).[topic](emitmessage.md#topic)*
 
-Defined in emitterListener.ts:6
+Defined in emitterListener.ts:4

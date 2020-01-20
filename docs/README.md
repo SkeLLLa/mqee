@@ -24,12 +24,14 @@
 
 ### Variables
 
-* [getId](README.md#const-getid)
+* [PREFIX](README.md#const-prefix)
 
 ### Functions
 
 * [defaultReject](README.md#defaultreject)
 * [defaultResolve](README.md#defaultresolve)
+* [generateId](README.md#generateid)
+* [isValid](README.md#isvalid)
 
 ## Type aliases
 
@@ -37,7 +39,7 @@
 
 Ƭ **HandlerFunction**: *function*
 
-Defined in emitterListener.ts:14
+Defined in emitterListener.ts:12
 
 #### Type declaration:
 
@@ -53,11 +55,11 @@ Name | Type |
 
 ## Variables
 
-### `Const` getId
+### `Const` PREFIX
 
-• **getId**: *Instance* = hyperid()
+• **PREFIX**: *"__mqee__"* = "__mqee__"
 
-Defined in emitterListener.ts:3
+Defined in idGenerator.ts:3
 
 ## Functions
 
@@ -76,5 +78,31 @@ ___
 ▸ **defaultResolve**(): *boolean*
 
 Defined in index.ts:4
+
+**Returns:** *boolean*
+
+___
+
+###  generateId
+
+▸ **generateId**(): *string*
+
+Defined in idGenerator.ts:5
+
+**Returns:** *string*
+
+___
+
+###  isValid
+
+▸ **isValid**(`id`: string): *boolean*
+
+Defined in idGenerator.ts:9
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`id` | string |
 
 **Returns:** *boolean*

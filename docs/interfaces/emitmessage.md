@@ -24,4 +24,4 @@
 
 • **topic**: *string*
 
-Defined in emitterListener.ts:6
+Defined in emitterListener.ts:4
