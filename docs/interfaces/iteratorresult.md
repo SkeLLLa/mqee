@@ -23,7 +23,7 @@
 
 • **done**: *boolean*
 
-Defined in index.ts:25
+Defined in index.ts:26
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 • **value**: *T*
 
-Defined in index.ts:26
+Defined in index.ts:27

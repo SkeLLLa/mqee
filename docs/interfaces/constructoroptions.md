@@ -10,12 +10,21 @@
 
 ### Properties
 
+* [cacheAdds](constructoroptions.md#optional-cacheadds)
 * [concurrency](constructoroptions.md#optional-concurrency)
 * [separator](constructoroptions.md#optional-separator)
 * [wildcardOne](constructoroptions.md#optional-wildcardone)
 * [wildcardSome](constructoroptions.md#optional-wildcardsome)
 
 ## Properties
+
+### `Optional` cacheAdds
+
+• **cacheAdds**? : *undefined | false | true*
+
+Defined in index.ts:17
+
+___
 
 ### `Optional` concurrency
 

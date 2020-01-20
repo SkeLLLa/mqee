@@ -24,7 +24,7 @@
 
 ▸ **next**(`value?`: any): *[IteratorResult](iteratorresult.md)‹T›*
 
-Defined in index.ts:29
+Defined in index.ts:30
 
 **Parameters:**
 
@@ -40,7 +40,7 @@ ___
 
 ▸ **return**(`value?`: any): *[IteratorResult](iteratorresult.md)‹T›*
 
-Defined in index.ts:30
+Defined in index.ts:31
 
 **Parameters:**
 
@@ -56,7 +56,7 @@ ___
 
 ▸ **throw**(`e?`: any): *[IteratorResult](iteratorresult.md)‹T›*
 
-Defined in index.ts:31
+Defined in index.ts:32
 
 **Parameters:**
 

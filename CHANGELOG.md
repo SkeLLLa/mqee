@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://gitlab.com/m03geek/mqee/compare/v0.1.4...v0.1.5) (2020-01-20)
+
+
+### Features
+
+* add cache ([cb3ac7c](https://gitlab.com/m03geek/mqee/commit/cb3ac7cef7a1d37e3fd425fdc6a2f53ffd6084bb))
+
 ### [0.1.4](https://gitlab.com/m03geek/mqee/compare/v0.1.3...v0.1.4) (2020-01-20)
 
 

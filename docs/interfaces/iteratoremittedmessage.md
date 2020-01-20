@@ -23,7 +23,7 @@
 
 • **context**? : *TContext*
 
-Defined in index.ts:21
+Defined in index.ts:22
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 • **message**: *[EmittedMessage](emittedmessage.md)*
 
-Defined in index.ts:20
+Defined in index.ts:21
