@@ -16,6 +16,7 @@
 
 * [addListener](emitter.md#addlistener)
 * [emit](emitter.md#emit)
+* [hasListener](emitter.md#haslistener)
 * [off](emitter.md#off)
 * [on](emitter.md#on)
 * [once](emitter.md#once)
@@ -84,11 +85,82 @@ Name | Type |
 
 ___
 
+###  hasListener
+
+▸ **hasListener**<**TContext**>(`listenerId`: string): *boolean*
+
+Defined in index.ts:101
+
+**Type parameters:**
+
+▪ **TContext**
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`listenerId` | string |
+
+**Returns:** *boolean*
+
+▸ **hasListener**<**TContext**>(`listener`: [EmitterListener](emitterlistener.md)): *boolean*
+
+Defined in index.ts:102
+
+**Type parameters:**
+
+▪ **TContext**
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`listener` | [EmitterListener](emitterlistener.md) |
+
+**Returns:** *boolean*
+
+▸ **hasListener**<**TContext**>(`topic`: string, `handler`: [HandlerFunction](../README.md#handlerfunction)‹TContext›): *boolean*
+
+Defined in index.ts:103
+
+**Type parameters:**
+
+▪ **TContext**
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`topic` | string |
+`handler` | [HandlerFunction](../README.md#handlerfunction)‹TContext› |
+
+**Returns:** *boolean*
+
+▸ **hasListener**<**TContext**>(`topic`: string, `handler`: [HandlerFunction](../README.md#handlerfunction)‹TContext›, `context`: TContext): *boolean*
+
+Defined in index.ts:104
+
+**Type parameters:**
+
+▪ **TContext**
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`topic` | string |
+`handler` | [HandlerFunction](../README.md#handlerfunction)‹TContext› |
+`context` | TContext |
+
+**Returns:** *boolean*
+
+___
+
 ###  off
 
 ▸ **off**<**TContext**>(`topic`: string, `handler`: [HandlerFunction](../README.md#handlerfunction)‹TContext›): *void*
 
-Defined in index.ts:154
+Defined in index.ts:181
 
 **Type parameters:**
 
@@ -105,7 +177,7 @@ Name | Type |
 
 ▸ **off**<**TContext**>(`topic`: string, `handler`: [HandlerFunction](../README.md#handlerfunction)‹TContext›, `context`: TContext): *void*
 
-Defined in index.ts:155
+Defined in index.ts:182
 
 **Type parameters:**
 
@@ -127,7 +199,7 @@ ___
 
 ▸ **on**<**TContext**>(`topic`: string, `handler`: [HandlerFunction](../README.md#handlerfunction)‹TContext›, `context?`: TContext): *[EmitterListener](emitterlistener.md)*
 
-Defined in index.ts:138
+Defined in index.ts:165
 
 **Type parameters:**
 
@@ -149,7 +221,7 @@ ___
 
 ▸ **once**<**TContext**>(`topic`: string, `handler`: [HandlerFunction](../README.md#handlerfunction)‹TContext›, `context?`: TContext): *[EmitterListener](emitterlistener.md)*
 
-Defined in index.ts:146
+Defined in index.ts:173
 
 **Type parameters:**
 
@@ -171,7 +243,7 @@ ___
 
 ▸ **removeAllListeners**(`topic`: string): *void*
 
-Defined in index.ts:129
+Defined in index.ts:156
 
 **Parameters:**
 
@@ -187,7 +259,7 @@ ___
 
 ▸ **removeListener**<**TContext**>(`listenerId`: string): *void*
 
-Defined in index.ts:101
+Defined in index.ts:128
 
 **Type parameters:**
 
@@ -203,7 +275,7 @@ Name | Type |
 
 ▸ **removeListener**<**TContext**>(`listener`: [EmitterListener](emitterlistener.md)): *void*
 
-Defined in index.ts:102
+Defined in index.ts:129
 
 **Type parameters:**
 
@@ -219,7 +291,7 @@ Name | Type |
 
 ▸ **removeListener**<**TContext**>(`topic`: string, `handler`: [HandlerFunction](../README.md#handlerfunction)‹TContext›): *void*
 
-Defined in index.ts:103
+Defined in index.ts:130
 
 **Type parameters:**
 
@@ -236,7 +308,7 @@ Name | Type |
 
 ▸ **removeListener**<**TContext**>(`topic`: string, `handler`: [HandlerFunction](../README.md#handlerfunction)‹TContext›, `context`: TContext): *void*
 
-Defined in index.ts:104
+Defined in index.ts:131
 
 **Type parameters:**
 

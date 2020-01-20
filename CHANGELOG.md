@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://gitlab.com/m03geek/mqee/compare/v0.1.2...v0.1.3) (2020-01-20)
+
+
+### Features
+
+* add has listener check ([4c220d9](https://gitlab.com/m03geek/mqee/commit/4c220d9944a2907a62213c90d178a41709a4eb62))
+
 ### [0.1.2](https://gitlab.com/m03geek/mqee/compare/v0.1.1...v0.1.2) (2020-01-17)
 
 
