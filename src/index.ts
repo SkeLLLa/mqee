@@ -98,6 +98,33 @@ class Emitter {
     return listener;
   }
 
+  hasListener<TContext>(listenerId: string): boolean;
+  hasListener<TContext>(listener: EmitterListener): boolean;
+  hasListener<TContext>(topic: string, handler: HandlerFunction<TContext>): boolean;
+  hasListener<TContext>(
+    topic: string,
+    handler: HandlerFunction<TContext>,
+    context: TContext
+  ): boolean;
+  hasListener<TContext>(
+    topic: string | EmitterListener<TContext>,
+    handler?: HandlerFunction<TContext> | string,
+    context?: TContext
+  ): boolean {
+    if (topic instanceof EmitterListener) {
+      return this._listenerMap.has(topic.id);
+    }
+    if (EmitterListener.isValid(topic)) {
+      return this._listenerMap.has(topic);
+    }
+    for (const el of this._listenerMap.values()) {
+      if (el.topic === topic && el.fn === handler && el.context === context) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   removeListener<TContext>(listenerId: string): void;
   removeListener<TContext>(listener: EmitterListener): void;
   removeListener<TContext>(topic: string, handler: HandlerFunction<TContext>): void;
