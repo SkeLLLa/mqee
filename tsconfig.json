@@ -16,7 +16,7 @@
     "paths": {
       "*": ["node_modules/*"]
     },
-    "typeRoots": ["./typings", "./node_modules/@types"],
+    "typeRoots": ["./typings", "./typings/**", "./node_modules/@types"],
     "resolveJsonModule": true,
     "sourceMap": true,
     "strictNullChecks": true,

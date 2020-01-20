@@ -22,7 +22,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "hyperid": "^2.0.2",
+    "nanoid": "^2.1.9",
     "qlobber": "^4.0.1"
   },
   "files": [
@@ -47,6 +47,7 @@
     "@commitlint/config-conventional": "^8.2.0",
     "@types/bluebird": "^3.5.29",
     "@types/jest": "^24.0.23",
+    "@types/nanoid": "^2.1.0",
     "@types/node": "^13.0.0",
     "@typescript-eslint/eslint-plugin": "^2.16.0",
     "@typescript-eslint/parser": "^2.16.0",
@@ -58,6 +59,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-sort-requires": "^2.1.0",
     "husky": "^4.0.10",
+    "jest": "^24.9.0",
     "prettier": "^1.19.1",
     "prettier-plugin-packagejson": "^2.0.10",
     "pretty-quick": "^2.0.1",

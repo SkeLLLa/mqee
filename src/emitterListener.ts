@@ -1,6 +1,4 @@
-import hyperid from 'hyperid';
-
-const getId = hyperid();
+import { generateId, isValid } from './idGenerator';
 
 export interface EmitMessage {
   topic: string;
@@ -25,7 +23,7 @@ class EmitterListener<TContext = any> {
   private _topic: string;
 
   constructor(topic: string, fn: HandlerFunction<TContext>, context: TContext, once = false) {
-    this._id = getId();
+    this._id = generateId();
     this._fn = fn;
     this._topic = topic;
     this._context = context;
@@ -33,7 +31,7 @@ class EmitterListener<TContext = any> {
   }
 
   static isValid(id: string): boolean {
-    return hyperid.decode(id) !== null;
+    return isValid(id);
   }
 
   get id(): string {
