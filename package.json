@@ -1,39 +1,81 @@
 {
   "name": "mqee",
   "version": "0.1.5",
-  "description": "",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "module": "dist/browser/index.js",
-  "scripts": {
-    "lint": "eslint --ext .ts .",
-    "test": "npm audit || true && npm run lint && npm run unit",
-    "unit": "exit 0",
-    "postunit": "exit 0 && codecov",
-    "build": "npm run build:node && npm run build:browser",
-    "build:node": "tsc",
-    "build:browser": "npm run build:browser:es6",
-    "build:browser:es6": "tsc -p tsconfig.browser.json -m es6 -t es6 --outDir dist/browser",
-    "prerelease": "npm run typedoc && git add -A ./docs",
-    "release": "git add -A && standard-version -a",
-    "typedoc": "rm -rf ./docs/* && typedoc --excludeExternals --name \"$npm_package_name\" --readme none --mode file --includeDeclarations --excludePrivate --theme markdown --out ./docs"
+  "description": "Event emitter with backpressure and AMQP-like topics, wildcards, etc.",
+  "keywords": [
+    "evenemitter",
+    "mq"
+  ],
+  "homepage": "https://gitlab.com/m03geek/mqee#README",
+  "bugs": {
+    "url": "https://gitlab.com/m03geek/mqee/issues"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkeLLLa/mqee.git"
+  },
   "license": "MIT",
-  "dependencies": {
-    "nanoid": "^2.1.9",
-    "qlobber": "^4.0.1"
-  },
+  "author": "m03geek",
+  "main": "dist/index.js",
+  "module": "dist/browser/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist/**/*.js",
     "dist/**/*.ts",
     "dist/**/*.map"
   ],
+  "scripts": {
+    "build": "npm run build:node && npm run build:browser",
+    "build:browser": "npm run build:browser:es6",
+    "build:browser:es6": "tsc -p tsconfig.browser.json -m es6 -t es6 --outDir dist/browser",
+    "build:node": "tsc",
+    "lint": "eslint --ext .ts .",
+    "prerelease": "npm run typedoc && git add -A ./docs",
+    "release": "git add -A && standard-version -a",
+    "test": "npm audit --production && npm run lint && npm run unit",
+    "typedoc": "rm -rf ./docs/* && typedoc --excludeExternals --name \"$npm_package_name\" --readme none --mode file --includeDeclarations --excludePrivate --theme markdown --out ./docs",
+    "unit": "exit 0",
+    "postunit": "exit 0 && codecov"
+  },
   "husky": {
     "hooks": {
+      "pre-commit": "pretty-quick --staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "dependencies": {
+    "nanoid": "^3.0.0",
+    "qlobber": "^5.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@types/bluebird": "^3.5.31",
+    "@types/jest": "^25.0.0",
+    "@types/nanoid": "^2.1.0",
+    "@types/node": "^14.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "@typescript-eslint/typescript-estree": "^2.34.0",
+    "codecov": "^3.7.0",
+    "eslint": "^7.0.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-sort-requires": "^2.1.0",
+    "husky": "^4.2.5",
+    "jest": "^26.0.0",
+    "prettier": "^2.0.0",
+    "prettier-plugin-packagejson": "^2.2.3",
+    "pretty-quick": "^2.0.1",
+    "rollup": "^2.0.0",
+    "rollup-plugin-terser": "^5.3.0",
+    "standard-version": "^8.0.0",
+    "ts-jest": "^26.0.0",
+    "ts-node": "^8.10.1",
+    "typedoc": "^0.17.0",
+    "typedoc-plugin-markdown": "^2.2.17",
+    "typescript": "^3.9.2"
   },
   "standard-version": {
     "scripts": {
@@ -41,36 +83,5 @@
       "postbump": "echo Version: v$npm_package_version",
       "posttag": "git push --follow-tags"
     }
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.2.0",
-    "@types/bluebird": "^3.5.29",
-    "@types/jest": "^24.0.23",
-    "@types/nanoid": "^2.1.0",
-    "@types/node": "^13.0.0",
-    "@typescript-eslint/eslint-plugin": "^2.16.0",
-    "@typescript-eslint/parser": "^2.16.0",
-    "@typescript-eslint/typescript-estree": "^2.16.0",
-    "codecov": "^3.6.1",
-    "eslint": "^6.8.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-config-prettier": "^6.9.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-sort-requires": "^2.1.0",
-    "husky": "^4.0.10",
-    "jest": "^24.9.0",
-    "prettier": "^1.19.1",
-    "prettier-plugin-packagejson": "^2.0.10",
-    "pretty-quick": "^2.0.1",
-    "rollup": "^1.27.12",
-    "rollup-plugin-terser": "^5.1.3",
-    "standard-version": "^7.0.1",
-    "ts-jest": "^24.2.0",
-    "ts-node": "^8.5.4",
-    "tslint": "^5.20.1",
-    "typedoc": "^0.16.0",
-    "typedoc-plugin-markdown": "^2.2.14",
-    "typescript": "^3.7.3"
   }
 }
